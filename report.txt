@@ -1,0 +1,24 @@
+Lab1 Report
+
+By DAntyNoel
+
+Some problems: It's common to be unfamiliar with such a huge project for the first try.
+It takes me a long time to understand the structure of riscv, such as the usage of functions
+or params, the api of each programs or files, and so on. 
+
+While it's not difficult to compile 'sleep' program, the others are hard to finish.
+
+I have tried to search for information of fork() and pipe() for 'pingpong'.
+
+As for 'trace' and 'sysinfo', the tutorial pdf is not enough. Firstly I'm not sure with 
+modifying the kernal, secondly it's hard to understand the connection between all the files.
+So I just search the original lab tutorials on CSDN or other personal website that gives
+the full discription of experiment, including scripts and locations, some with common errors,
+which benefits my projects a lot.
+
+Here are the links:
+https://blog.csdn.net/MyArrow/article/details/9037135
+https://www.cnblogs.com/weijunji/p/14338408.html
+https://szp2016.github.io/xv6/xv6-syscall/
+
+Another: I haven't got all the points of gdb yet, this tool is hard to use...
