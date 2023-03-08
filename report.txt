@@ -1,0 +1,17 @@
+The answer for RISCV assembly is store in file `answers-traps.txt`.
+
+Backtrace:
+
+Try to understand when to alarm in function `printf` is a little confused. 
+Since the real usage of `PGROUNDDOWN` returns an error location, that needs offset.
+
+Alarm:
+
+The key point of alarm is to safely store the frame. Techniques are to store the whole
+trapframe instead of a pointer. (Though it is OK if we store the pointer)
+
+Mistakes met that I can't return a0 correctly. I have tried to call inline assembly
+but still be wrong. Notes that a0 is already changed when call the 'sigreturn', the
+correct a0 was in trapframe, just return p->trapframe->a0 is OK.
+
+
