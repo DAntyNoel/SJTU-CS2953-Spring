@@ -1,0 +1,2 @@
+It is easy: When muti-threading, one calling puts() writes the memory while others do the same,
+data is overwrite and causes the missing.

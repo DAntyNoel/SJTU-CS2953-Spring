@@ -1,0 +1,3 @@
+Nothing important happened. Thread is clear after explaining the usage
+of context switch.
+Locks are simple to use: Everytime use your memory.
