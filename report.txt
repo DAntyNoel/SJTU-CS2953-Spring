@@ -1,0 +1,17 @@
+Lab FS report
+
+bigfile
+
+修改 bmap 的映射规则将一个 direct block 变为 doubly indirect
+block 从而实现扩大文件的目的，需要注意修改 itrunc 释放空间函数的
+多重释放，释放二级 block 完毕之后要释放一级 block，模拟已经实现
+的样例进行扩充即可。
+
+碰到的一个细节问题是要设置 fs.h 中 MAXFILE 的大小，否则操作系统
+自动检查 bn > MAXFILE 自动掐掉 IO 进程导致空余块不足。
+
+symbolic links
+
+实现软链接类并循环读取软链接内容，加入 O_NOFOLLOW 标志位，修改
+sys_open 系统调用，然后实现用户调用。采用了数组方式记录链接跳转
+地址，并设置了最大循环次数。按照要求来即可，并不复杂。
